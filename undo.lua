@@ -21,7 +21,7 @@ function undo:undo()
 	local size = #self.stack
     if size > 0 then
         local status = self.stack[size]
-        for w, f in pairs(status) do 
+        for w, f in pairs(status) do
             if w and f and w:isVisible() and w:isStandard() and w:id() then
                 if not compareFrame(f, w:frame()) then
                     w:setFrame(f)
